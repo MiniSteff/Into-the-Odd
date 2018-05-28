@@ -1,0 +1,410 @@
+/*
+███████╗████████╗██╗   ██╗██╗     ███████╗
+██╔════╝╚══██╔══╝╚██╗ ██╔╝██║     ██╔════╝
+███████╗   ██║    ╚████╔╝ ██║     █████╗  
+╚════██║   ██║     ╚██╔╝  ██║     ██╔══╝  
+███████║   ██║      ██║   ███████╗███████╗
+╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝
+*/
+
+.charsheet 
+{ 
+    font-family: 'Times New Roman';
+    color: #662c2b;
+    font-size: 15px;
+    width: 800px;
+    background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg.png') no-repeat left top,
+                url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg_repeat-y.png') repeat-y 0 1133px;
+    box-sizing: border-box;}
+
+.btn{
+    background: rgba(222,194,182,0.7);
+    text-shadow: 0 0 0 #000000;
+    color: #662c2b;
+    font-size: 15px;
+    margin-top: 5px;
+    border-radius: 0;
+    border: 0;}
+
+.btn:hover{ background: rgba(222,194,182,1);}
+.repcontrol_add, .repcontrol_edit {font-family: "Times new roman";}
+.repcontrol_move{ height: 20px; width: 20px; line-height: 20px; position: relative; z-index: 200;}
+
+.charsheet *, .charsheet *:before, .charsheet *:after {
+    box-sizing: inherit;
+}
+
+/* Redéfinie des trucs à zéro, retirer les puces des listes et la décoraction des liens */
+.charsheet h1, .charsheet h2, .charsheet h3, .charsheet h4, .charsheeth5, 
+.charsheet h6, .charsheet a, .charsheet p, .charsheet span, .charsheet div,
+.charsheet figure, .charsheet img, .charsheet ul, .charsheet li,
+.charsheet body, .charsheet fieldset, .charsheet input, .charsheet label, .charsheet textarea 
+{
+	margin: 0; padding: 0; border: 0;
+	box-shadow: 0 0 0 #000000; border-radius: 0;
+}
+
+.charsheet li{list-style: none;}
+.charsheet a{text-decoration: none;}
+
+/* Rend les images élastique */
+.charsheet img { max-width: 100%; height: auto; vertical-align: bottom; }
+
+.sheet-rouge{ color: #b12e28;}
+.sheet-div1{ 
+    width: 570px;
+    margin-top: 10px;
+    margin-left: 220px;}
+
+.sheet-titre131{
+    font-family: 'Times New Roman';
+    color : #662c2b;
+    font-weight: normal;
+    font-size: 20px;
+    margin: 10px 0;}
+
+.sheet-titre211,
+.sheet-titre2112{
+    font-family: 'Times New Roman';
+    color : #662c2b;
+    font-weight: normal;
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;}
+
+.sheet-titre2112{ font-size: 20px;}
+
+.charsheet textarea{
+    background: transparent;
+    font-family: 'Georgia';
+    font-size: 16px;}
+
+.charsheet input{
+    background: transparent;
+    font-family: 'Georgia';
+    font-size: 16px;}
+    
+/*------------------------------------------------------------------------------
+DIV11*/
+.sheet-div11{ margin-bottom: 50px;}
+
+.sheet-div11 label,
+.sheet-titre11{
+    font-family: 'Times New Roman';
+    color : #662c2b;
+    font-weight: normal;
+    font-size: 25px;
+    margin: 20px 0;}
+
+.sheet-div11 .sheet-niveau{
+    display: inline-block;
+    width: 30%;
+    text-align: left;}   
+
+.sheet-div11 .sheet-titreNiveau{
+    font-family: 'Times New Roman';
+    font-size: 18px;
+    display: inline-block;
+    width: 120px;}
+
+.sheet-div11 input[type="text"]{
+    background: transparent;
+    width: 490px;
+    border-bottom: 1px dashed #662c2b;}
+
+input[name="attr_character_name"]{
+    font-family: "Segoe Script";
+    font-size: 20px;}
+/* DIV11 
+------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------
+DIV12*/
+.sheet-div12,
+.sheet-div22{
+    display: inline-block;
+    width: 115px;}
+
+.sheet-div12 input[type="number"],
+.sheet-div22 input[type="number"]{
+    font-family: 'Georgia';
+    color: #000000;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    background: transparent;
+    border: 2px solid #000000;}
+
+.sheet-div12 input[type="number"] + input[type="number"],
+.sheet-div22 input[type="number"] + input[type="number"]{ color: #b12e28; border: 2px solid #b12e28;}
+
+.sheet-div12 input[type="number"]:last-child,
+.sheet-div22 input[type="number"]:last-child{
+    width: 103px;}
+
+.sheet-div12 .sheet-div12Titre,
+.sheet-div22 .sheet-div22Titre{
+    position: relative;
+    width: 90px;
+    z-index: 1;
+    background: #ffffff;
+    font-family: 'Times New Roman';
+    color : #b12e28;
+    height: 30px;
+    margin-left: 15px;
+    margin-bottom: -14px;
+    font-size: 25px;
+    line-height: 30px;}
+
+.sheet-div12 .sheet-div12Titre4, .sheet-div12 .sheet-div12Titre5{ padding-top: 4px;}
+
+.sheet-div12 .sheet-div12Titre1{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg.png') 34.5% 21%;}
+.sheet-div12 .sheet-div12Titre2{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg.png') 34.7% 29.5%;}
+.sheet-div12 .sheet-div12Titre3{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg.png') 34.5% 37.3%;}
+.sheet-div12 .sheet-div12Titre4{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg.png') 34.5% 45.3%; padding-top: 0;}
+.sheet-div12 .sheet-div12Titre5{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg.png') 34.5% 52.1%; padding-top: 0; margin-top: 0px;}
+
+.sheet-div12 button[type="roll"],
+.sheet-div22 button[type="roll"]{
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    margin-bottom: 5px;
+    width: 25px;
+    height: 30px;}
+
+.sheet-div12 .sheet-button1,
+.sheet-div22 .sheet-button1{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-bottom: -8px;
+    margin-left: -29px;
+    background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d20.png') 50% 50% no-repeat;
+    background-size: 30px 30px;}
+
+.sheet-div12 button[type="roll"]:hover + .sheet-button1,
+.sheet-div22 button[type="roll"]:hover + .sheet-button1{
+    background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d20n.png') 50% 50% no-repeat;
+    background-size: 30px 30px;}
+
+
+
+/* DIV12 
+------------------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------------------
+DIV13 */
+.sheet-div13{
+    display: inline-block;
+    vertical-align: top;
+    width: 414px;}
+
+.sheet-div131{
+    width: 450px;
+    border: 2px solid #dec2b6;
+    border-right: 0;
+    margin-bottom: 10px;
+    padding: 0 10px;}
+    
+/* DIV13 
+------------------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------------------
+DIV211 */
+
+.sheet-div2{
+    width: 530px;
+    margin-left: 260px;}
+
+.sheet-div211{
+    display: inline-block;
+    vertical-align: top;
+    width: 250px;
+    border: 2px solid #dec2b6;
+    margin: 0 5px 10px;
+    padding: 0 10px;}
+/* DIV211 
+------------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+DIVBOUTON */
+.sheet-divBouton{
+    width: 570px;
+    margin-left: 220px;}
+
+.sheet-button2{
+    position: relative;
+    opacity: 0;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    vertical-align: top;}
+
+.sheet-button2 + span{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: red;
+    margin-left: -32px;
+    background-size: 30px 30px;}
+
+/* DIVBOUTON 
+------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------
+DIVBOUTON */
+.sheet-divBouton{
+    display: inline-block;
+    width: 250px;
+    margin-left: 220px;}
+
+.sheet-divCache{
+    display: inline-block;
+    width: 300px;
+    text-align: right;}
+
+.sheet-button2{
+    position: relative;
+    opacity: 0;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    vertical-align: top;}
+
+.sheet-button2 + span{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: red;
+    margin-left: -32px;
+    background-size: 30px 30px;}
+
+.sheet-button21 + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d4.png') top left no-repeat; background-size: 30px 30px;}
+.sheet-button22 + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d6.png') top left no-repeat; background-size: 30px 30px;}
+.sheet-button23 + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d8.png') top left no-repeat; background-size: 30px 30px;}
+.sheet-button24 + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d10.png') top left no-repeat; background-size: 30px 30px;}
+.sheet-button25 + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d12.png') top left no-repeat; background-size: 30px 30px;}
+.sheet-button26 + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d20.png') top left no-repeat; background-size: 30px 30px;}
+
+.sheet-button21:hover + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d4n.png') top left no-repeat; background-size: 30px 30px;}
+.sheet-button22:hover + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d6n.png') top left no-repeat; background-size: 30px 30px;}
+.sheet-button23:hover + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d8n.png') top left no-repeat; background-size: 30px 30px;}
+.sheet-button24:hover + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d10n.png') top left no-repeat; background-size: 30px 30px;}
+.sheet-button25:hover + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d12n.png') top left no-repeat; background-size: 30px 30px;}
+.sheet-button26:hover + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d20n.png') top left no-repeat; background-size: 30px 30px;}
+
+/* DIVBOUTON 
+------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------
+TEMPLATEROLL1 */
+
+.sheet-rolltemplate-rollCaracteristique .sheet-rolltemplate1,
+.sheet-rolltemplate-rollDommage .sheet-rolltemplate1{
+    font-family: "Times New Roman";
+    border: 2px solid #b12e28;
+    font-size: 18px;
+    padding: 10px;
+    background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg_template.png') 50% 50%;
+    background-size: cover;}
+
+.sheet-rolltemplate-rollCaracteristique .sheet-templateNomJoueur,
+.sheet-rolltemplate-rollDommage .sheet-templateNomJoueur{
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Georgia";}
+
+.sheet-rolltemplate-rollCaracteristique .sheet-reussie{
+    font-weight: bold;
+    text-align: center;
+    color: #719e1a;
+    font-size: 25px;
+    line-height: 30px;
+    font-family: "Georgia";}
+
+.sheet-rolltemplate-rollCaracteristique .sheet-echec{
+    font-weight: bold;
+    text-align: center;
+    color: #b12e28;
+    font-size: 25px;
+    line-height: 30px;
+    font-family: "Georgia";}
+    
+.sheet-rolltemplate-rollDommage .inlinerollresult{ 
+    background-color: transparent;
+    display: block;
+    color: #b12e28;
+    border: 0px solid #365d75 !important;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: "Impact";
+    font-size: 60px;}
+    
+/* TEMPLATEROLL1 
+------------------------------------------------------------------------------*/
+.sheet-titre3{
+    font-family: "Times New Roman";
+    font-size: 50px;
+    margin: 20px 0 40px;
+    text-align: center;}
+
+.sheet-div23,
+.sheet-div24{
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    border: 2px solid #dec2b6;
+    margin: 0 5px 10px;
+    padding: 0 10px;
+    min-height: 404px;}
+
+.sheet-div24{ width: 500px; min-height: auto;}
+
+.sheet-div23 textarea,
+.sheet-div24 textarea{
+    min-height: 240px;}
+    
+.sheet-button3{
+    position: relative;
+    opacity: 0;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;}
+    
+.sheet-button31 + span, .sheet-button32 + span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: red;
+    margin-left: -22px;
+    vertical-align: bottom}
+    
+.sheet-button31 + span, .sheet-button32 + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d6.png') top left no-repeat; background-size: 20px 20px;}
+.sheet-button31:hover + span, .sheet-button32:hover + span{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d6n.png') top left no-repeat; background-size: 20px 20px;}
+
+input[name="attr_compagnonNom"]{width: 375px;}
+input[name="attr_nomArmeCompagnon"], input[name="attr_nomArme"]{width: 250px;}
+input[name="attr_jetArmeCompagnon"], input[name="attr_jetArme"]{width: 75px;}
+
+.sheet-caracInfo{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    margin-right: 17px;
+    margin-left: 1px;
+    font-style: italic;}
+    
+.sheet-div22 .sheet-div12Titre4{ padding-top: 0;}
+.sheet-div22 .sheet-div12Titre5{ padding-top: 0; margin-top: 0px;}
