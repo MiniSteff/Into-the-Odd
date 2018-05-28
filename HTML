@@ -163,32 +163,3 @@
     <p class="echec">{{degatArme}}</p> 
 </div>
 </rolltemplate>
-
-<script type="text/worker">
-    on("change:jetCache sheet:opened", function() {
-    getAttrs(['jetCache', 'jetCache2'], function(values) {
-        if (values.jetCache == 'g' ) {
-            setAttrs({ 
-                jetCache2: '/w gm',
-            });
-        }
-        if (values.jetCache == '' ) {
-            setAttrs({ 
-                jetCache2: '',
-            });
-        }
-    });
-    });
-</script>
-
-<script type="text/worker">
-    on("change:deArmeJoueur1 sheet:opened", function() {
-    getAttrs(['deArmeJoueur1', 'deArmeJoueur2'], function(values) {
-        if (values.deArmeJoueur1 !== values.deArmeJoueur2 ) {
-            setAttrs({ 
-                deArmeJoueur2: values.deArmeJoueur1,
-            });
-        }
-    });
-    });
-</script>
