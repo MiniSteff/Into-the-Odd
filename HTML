@@ -1,0 +1,194 @@
+<div>
+    <div class="divBouton">
+        <button class="button2 button21" type="roll" value='/@{jetCache}r 1d4'></button><span></span>
+        <button class="button2 button22" type="roll" value='/@{jetCache}r 1d6'></button><span></span>
+        <button class="button2 button23" type="roll" value='/@{jetCache}r 1d8'></button><span></span>
+        <button class="button2 button24" type="roll" value='/@{jetCache}r 1d10'></button><span></span>
+        <button class="button2 button25" type="roll" value='/@{jetCache}r 1d12'></button><span></span>
+        <button class="button2 button26" type="roll" value='/@{jetCache}r 1d20'></button><span></span>
+    </div>
+    <div class="divCache">
+        <p>Jet caché ? Oui <input type="radio" name="attr_jetCache" value="g"></input> Non<input type="radio" name="attr_jetCache" value="" checked></input></p>
+        <input type="text" name="attr_jetCache2" value="" style="display: none"></input>
+    </div>
+    <div class="div1">
+    <!-- DIV NOM / NIVEAU ----------------------------------------------------------------------------------- -->
+        <div class="div11">
+            <label><span class="rouge">N</span>OM : <input type="text" name="attr_character_name"></input></label>
+            <p class="titre11"><span class="rouge">N</span>IVEAU :</p>
+                <p class="niveau"><span class="titreNiveau"><span class="rouge">N</span>ovice</span><input type="radio" name="attr_niveauJoueur" value="1"></input></p>
+                <p class="niveau"><span class="titreNiveau"><span class="rouge">P</span>rofessionnel</span><input type="radio" name="attr_niveauJoueur" value="2"></input></p>
+                <p class="niveau"><span class="titreNiveau"><span class="rouge">E</span>xpert</span><input type="radio" name="attr_niveauJoueur" value="3"></input></p>
+                <p class="niveau"><span class="titreNiveau"><span class="rouge">V</span>étéran</span><input type="radio" name="attr_niveauJoueur" value="4"></input></p>
+                <p class="niveau"><span class="titreNiveau"><span class="rouge">M</span>aître</span><input type="radio" name="attr_niveauJoueur" value="5"></input></p>
+                <p class="niveau"><span class="titreNiveau"><span class="rouge">A</span>u-delà</span><input type="radio" name="attr_niveauJoueur" value="6"></input></p>
+        </div>
+    <!-- ----------------------------------------------------------------------------------------------------- -->
+        
+    <!-- CARACTERISTIQUES ----------------------------------------------------------------------------------- -->
+        <div class="div12">
+            <p class="div12Titre div12Titre1">FOR<button type="roll" value='@{jetCache2} &{template:rollCaracteristique} {{dice=[[1d20]]}} {{nomJet=Force}} {{valeurCarac=[[@{forJoueur}]]}} {{nomJoueur=@{character_name}}}' name='roll_rollCaracteristique'></button><span class="button1"></span></p>
+            <input type="number" name="attr_forJoueur" value="0"></input> <input type="number" name="attr_forMaxJoueur" value="0"></input><br>
+            <span class="caracInfo">actuelle</span><span class="caracInfo">max</span>
+            <p class="div12Titre div12Titre2">DEX<button type="roll" value='@{jetCache2} &{template:rollCaracteristique} {{dice=[[1d20]]}} {{nomJet=Dextérité}} {{valeurCarac=[[@{dexJoueur}]]}} {{nomJoueur=@{character_name}}}' name='roll_rollCaracteristique'></button><span class="button1"></span></p>
+            <input type="number" name="attr_dexJoueur" value="0"></input> <input type="number" name="attr_dexMaxJoueur" value="0"></input><br>
+            <span class="caracInfo">actuelle</span><span class="caracInfo">max</span>
+            <p class="div12Titre div12Titre3">VOL<button type="roll" value='@{jetCache2} &{template:rollCaracteristique} {{dice=[[1d20]]}} {{nomJet=Volonté}} {{valeurCarac=[[@{volJoueur}]]}} {{nomJoueur=@{character_name}}}' name='roll_rollCaracteristique'></button><span class="button1"></span></p>
+            <input type="number"name="attr_volJoueur" value="0"></input> <input type="number"name="attr_volMaxJoueur" value="0"></input><br>
+            <span class="caracInfo">actuelle</span><span class="caracInfo">max</span>
+            <p class="div12Titre div12Titre4">PV</p>
+            <input type="number" name="attr_pvJoueur" value="0"></input> <input type="number" name="attr_pvMaxJoueur" value="0"></input>
+            <span class="caracInfo">actuelle</span><span class="caracInfo">max</span>
+            <p class="div12Titre div12Titre5">Armure</p>
+            <input type="number" name="attr_armureJoueur" value="0"></input>
+        </div>
+    <!-- ----------------------------------------------------------------------------------------------------- -->
+    
+        
+    <!-- ETRANGETES / EQUIPEMENT ----------------------------------------------------------------------------------- -->
+        <div class="div13">
+            <div class="div131">
+                <p class="titre131"><span class="rouge">É</span>TRANGETÉS :</p>
+                <textarea name="attr_etrangetesJoueur" placeholder="..........................................."></textarea>
+            </div>
+            <div class="div131">
+                <p class="titre131"><span class="rouge">É</span>QUIPEMENT :</p>
+                <fieldset class="repeating_arme">
+                    <input type="text" name="attr_nomArme" placeholder="....................................."></input>
+                    <input type="text" name="attr_jetArme" value="" placeholder="1d?"></input>
+                    <button class="button3 button32" type="roll" value='@{jetCache2} &{template:rollDommage} {{degatArme=[[@{jetArme}]]}} {{deArme=@{jetArme}}} {{nomArme=@{nomArme}}} {{nomJoueur=@{character_name}}}'></button><span></span>
+                </fieldset>
+                <textarea name="attr_equipementJoueur" placeholder="..........................................."></textarea>
+            </div>
+        </div>
+    <!-- ----------------------------------------------------------------------------------------------------- -->
+    </div>
+    
+    <div class="div2">
+        <div class="div21">
+            <div class="div211">
+                <p class="titre211"><span class="rouge">S</span>PÉCIALITÉ :</p>
+                <input type="text" name="attr_specialite1Joueur" placeholder="..........................................."></input>
+                <p class="titre2112">Contacts</p>
+                <textarea name="attr_contact1Joueur" placeholder="..........................................."></textarea>
+            </div>
+            
+            <div class="div211">
+                <p class="titre211"><span class="rouge">S</span>PÉCIALITÉ :</p>
+                <input type="text" name="attr_specialite2Joueur" placeholder="..........................................."></input>
+                <p class="titre2112">Contacts</p>
+                <textarea name="attr_contact2Joueur" placeholder="..........................................."></textarea>
+            </div>
+        </div>
+        
+        <div class="div21">
+            <div class="div211">
+                <p class="titre2112"><span class="rouge">C</span>OMPAGNIES :</p>
+                <textarea name="attr_compagnieJoueur" placeholder="..........................................."></textarea>
+            </div>
+            
+            <div class="div211">
+                <p class="titre211"><span class="rouge">E</span>NTREPRISES :</p>
+                <textarea name="attr_entreprisesJoueur" placeholder="..........................................."></textarea>
+            </div>
+        </div>
+    
+        <!-- COMPAGNON ----------------------------------------------------------------------------------- -->
+        <br><p class="titre3"><span class="rouge">C</span>OMPAGNON</p>
+        
+        <fieldset class="repeating_compagnon">
+            <div class="div22">
+                <p class="div22Titre div22Titre1">FOR<button type="roll" value='@{jetCache2} &{template:rollCaracteristique} {{dice=[[1d20]]}} {{nomJet=Force}} {{valeurCarac=[[@{forCompagnonJoueur}]]}} {{nomJoueur=@{compagnonNom}}}' name='roll_rollCaracteristique'></button><span class="button1"></span></p>
+                <input type="number" name="attr_forCompagnonJoueur" value="0"></input> <input type="number" name="attr_forMaxCompagnonJoueur" value="0"></input><br>
+                <span class="caracInfo">actuelle</span><span class="caracInfo">max</span>
+                <p class="div22Titre div22Titre2">DEX<button type="roll" value='@{jetCache2} &{template:rollCaracteristique} {{dice=[[1d20]]}} {{nomJet=Dextérité}} {{valeurCarac=[[@{dexCompagnonJoueur}]]}} {{nomJoueur=@{compagnonNom}}}' name='roll_rollCaracteristique'></button><span class="button1"></span></p>
+                <input type="number" name="attr_dexCompagnonJoueur" value="0"></input> <input type="number" name="attr_dexMaxCompagnonJoueur" value="0"></input><br>
+                <span class="caracInfo">actuelle</span><span class="caracInfo">max</span>
+                <p class="div22Titre div22Titre3">VOL<button type="roll" value='@{jetCache2} &{template:rollCaracteristique} {{dice=[[1d20]]}} {{nomJet=Volonté}} {{valeurCarac=[[@{volCompagnonJoueur}]]}} {{nomJoueur=@{compagnonNom}}}' name='roll_rollCaracteristique'></button><span class="button1"></span></p>
+                <input type="number"name="attr_volCompagnonJoueur" value="0"></input> <input type="number"name="attr_volMaxCompagnonJoueur" value="0"></input><br>
+                <span class="caracInfo">actuelle</span><span class="caracInfo">max</span>
+                <p class="div22Titre div22Titre4">PV</p>
+                <input type="number" name="attr_pvCompagnonJoueur" value="0"></input> <input type="number" name="attr_pvMaxCompagnonJoueur" value="0"></input>
+                <span class="caracInfo">actuelle</span><span class="caracInfo">max</span>
+                <p class="div22Titre div12Titre5">Armure</p>
+                <input type="number" name="attr_armureCompagnonJoueur" value="0"></input>
+            </div>
+        <!-- ----------------------------------------------------------------------------------------------------- -->
+        
+            
+        <!-- ETRANGETES / EQUIPEMENT ----------------------------------------------------------------------------------- -->
+                <div class="div23">
+                    <p class="titre211"><span class="rouge">N</span>OM :</p>
+                    <input type="text" name="attr_compagnonNom" placeholder="....................................."></input>
+                    <p class="titre211"><span class="rouge">A</span>RMES :</p>
+                    <input type="text" name="attr_nomArmeCompagnon" placeholder="....................................."></input>
+                    <input type="text" name="attr_jetArmeCompagnon" value="" placeholder="1d?" ></input>
+                    <button class="button3 button31" type="roll" value='@{jetCache2} &{template:rollDommage} {{degatArme=[[@{jetArmeCompagnon}]]}} {{deArme=@{jetArmeCompagnon}}} {{nomArme=@{nomArmeCompagnon}}} {{nomJoueur=@{compagnonNom}}}'></button><span></span>
+                    <p class="titre211"><span class="rouge">N</span>OTES :</p>
+                    <textarea name="attr_etrangetesJoueur" placeholder="..........................................."></textarea>
+                </div>
+            </fieldset>
+    <!-- ----------------------------------------------------------------------------------------------------- -->
+        <br><p class="titre3"><span class="rouge">N</span>OTES</p>
+        
+        <div class="div24">
+            <textarea name="attr_notesJoueur" placeholder="..........................................."></textarea>
+        </div>
+    </div>
+</div>
+    
+
+<rolltemplate class="sheet-rolltemplate-rollCaracteristique">
+<div class="rolltemplate1">
+    <p><span class="templateNomJoueur">{{nomJoueur}}</span> fait un jet de {{nomJet}}</p>
+    <p>{{nomJet}} : {{valeurCarac}}</p>
+    <p>Jet :{{dice}}</p>
+    {{#rollLess() dice valeurCarac}}
+        <p class="reussie">REUSSITE {{#rollWasFumble() dice}}CRITIQUE{{/rollWasFumble() dice}}</p>
+    {{/rollLess() dice valeurCarac}}
+    
+    {{#rollTotal() dice valeurCarac}}
+        <p class="reussie">REUSSITE {{#rollWasFumble() dice}}CRITIQUE{{/rollWasFumble() dice}}</p>
+    {{/rollTotal() dice valeurCarac}}
+    
+    {{#rollGreater() dice valeurCarac}}
+        <p class="echec">ECHEC {{#rollWasCrit() dice}}CRITIQUE{{/rollWasCrit() dice}}</p>
+    {{/rollGreater() dice valeurCarac}}
+</div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-rollDommage">
+<div class="rolltemplate1">
+    <p><span class="templateNomJoueur">{{nomJoueur}}</span> attaque avec un(e) <span class="templateNomJoueur">{{nomArme}} ({{deArme}})</span></p>
+    <p class="echec">{{degatArme}}</p> 
+</div>
+</rolltemplate>
+
+<script type="text/worker">
+    on("change:jetCache sheet:opened", function() {
+    getAttrs(['jetCache', 'jetCache2'], function(values) {
+        if (values.jetCache == 'g' ) {
+            setAttrs({ 
+                jetCache2: '/w gm',
+            });
+        }
+        if (values.jetCache == '' ) {
+            setAttrs({ 
+                jetCache2: '',
+            });
+        }
+    });
+    });
+</script>
+
+<script type="text/worker">
+    on("change:deArmeJoueur1 sheet:opened", function() {
+    getAttrs(['deArmeJoueur1', 'deArmeJoueur2'], function(values) {
+        if (values.deArmeJoueur1 !== values.deArmeJoueur2 ) {
+            setAttrs({ 
+                deArmeJoueur2: values.deArmeJoueur1,
+            });
+        }
+    });
+    });
+</script>
