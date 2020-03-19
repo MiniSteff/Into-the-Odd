@@ -13,8 +13,8 @@
     color: #662c2b;
     font-size: 15px;
     width: 800px;
-    background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg.png') no-repeat left top,
-                url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg_repeat-y.png') repeat-y 0 1133px;
+    background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg2.png') no-repeat left top,
+                url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg_repeat-y2.png') repeat-y 0 1133px;
     box-sizing: border-box;}
 
 .btn{
@@ -23,6 +23,7 @@
     color: #662c2b;
     font-size: 15px;
     margin-top: 5px;
+    margin-right: 10px;
     border-radius: 0;
     border: 0;}
 
@@ -76,6 +77,7 @@
 
 .charsheet textarea{
     background: transparent;
+    padding: 10px 0;
     font-family: 'Georgia';
     font-size: 16px;}
 
@@ -131,7 +133,7 @@ DIV12*/
     font-family: 'Georgia';
     color: #000000;
     width: 50px;
-    height: 50px;
+    height: 40px;
     font-size: 25px;
     text-align: center;
     background: transparent;
@@ -154,17 +156,17 @@ DIV12*/
     color : #b12e28;
     height: 30px;
     margin-left: 15px;
-    margin-bottom: -14px;
+    margin-bottom: 0px;
     font-size: 25px;
     line-height: 30px;}
 
 .sheet-div12 .sheet-div12Titre4, .sheet-div12 .sheet-div12Titre5{ padding-top: 4px;}
 
-.sheet-div12 .sheet-div12Titre1{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg.png') 34.5% 21%;}
-.sheet-div12 .sheet-div12Titre2{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg.png') 34.7% 29.5%;}
-.sheet-div12 .sheet-div12Titre3{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg.png') 34.5% 37.3%;}
-.sheet-div12 .sheet-div12Titre4{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg.png') 34.5% 45.3%; padding-top: 0;}
-.sheet-div12 .sheet-div12Titre5{ background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/bg.png') 34.5% 52.1%; padding-top: 0; margin-top: 0px;}
+.sheet-div12 .sheet-div12Titre1{ background: rgba(0,0,0,0);}
+.sheet-div12 .sheet-div12Titre2{ background: rgba(0,0,0,0);}
+.sheet-div12 .sheet-div12Titre3{ background: rgba(0,0,0,0);}
+.sheet-div12 .sheet-div12Titre4{ background: rgba(0,0,0,0);}
+.sheet-div12 .sheet-div12Titre5{ background: rgba(0,0,0,0);}
 
 .sheet-div12 button[type="roll"],
 .sheet-div22 button[type="roll"]{
@@ -180,15 +182,15 @@ DIV12*/
     display: inline-block;
     width: 30px;
     height: 30px;
-    margin-bottom: -8px;
+    vertical-align: middle;
     margin-left: -29px;
-    background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d20.png') 50% 50% no-repeat;
-    background-size: 30px 30px;}
+    background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d20.png') 25% 25% no-repeat;
+    background-size: 20px 20px;}
 
 .sheet-div12 button[type="roll"]:hover + .sheet-button1,
 .sheet-div22 button[type="roll"]:hover + .sheet-button1{
-    background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d20n.png') 50% 50% no-repeat;
-    background-size: 30px 30px;}
+    background: url('https://raw.githubusercontent.com/MiniSteff/Into-the-Odd/master/d20n.png') 25% 25% no-repeat;
+    background-size: 20px 20px;}
 
 
 
@@ -205,9 +207,9 @@ DIV13 */
     width: 414px;}
 
 .sheet-div131{
-    width: 450px;
+    width: 440px;
+    min-height: 235px;
     border: 2px solid #dec2b6;
-    border-right: 0;
     margin-bottom: 10px;
     padding: 0 10px;}
     
@@ -220,9 +222,12 @@ DIV13 */
 DIV211 */
 
 .sheet-div2{
-    width: 530px;
-    margin-left: 260px;}
+    width: 570px;
+    margin-left: 220px;}
 
+.sheet-div21{
+    margin-left: 40px;}
+    
 .sheet-div211{
     display: inline-block;
     vertical-align: top;
@@ -363,13 +368,13 @@ TEMPLATEROLL1 */
 .sheet-div24{
     display: inline-block;
     vertical-align: top;
-    width: 400px;
+    width: 430px;
     border: 2px solid #dec2b6;
     margin: 0 5px 10px;
     padding: 0 10px;
-    min-height: 404px;}
+    min-height: 480px;}
 
-.sheet-div24{ width: 500px; min-height: auto;}
+.sheet-div24{ width: 550px; min-height: auto;}
 
 .sheet-div23 textarea,
 .sheet-div24 textarea{
